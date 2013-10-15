@@ -1,4 +1,4 @@
-== European Citizen Initiative
+## European Citizen Initiative
 
 Great concept, badly supported by a softare to collect signatures that is citizen and campaigners hostile.
 
@@ -8,8 +8,11 @@ It doesn't export all the data, like for instance the id number, because we didn
 
 Anyway, if you need to export new fields, simply alter the keys line and add them.
 
-=== how to use
+## how to use
 From the command line, simply
-php xml.php nameofthexmlfile.xml
+$php xml.php nameofthexmlfile.xml
 
 Good luck. you'll need it. 
+
+## todo
+being able to handle a folder as param and generate a single csv file from all the signatures that were so cleverly spread into the various xml files to make us miserable.
