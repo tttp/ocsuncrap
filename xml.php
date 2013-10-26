@@ -16,8 +16,8 @@ if (is_dir($file)) {
   $fp = fopen($csv, 'w');
   $objects = new RecursiveIteratorIterator(new RecursiveDirectoryIterator($file));
   foreach($objects as $name => $object){
-    if (".xml" == substr ($name,-4)) {
-//    if ("_dec.xml" == substr ($name,-8)) {
+//    if (".xml" == substr ($name,-4)) {
+    if ("_dec.xml" == substr ($name,-8)) {
       $s = xml2csv($fp,$name);
       $total +=$s;
       echo "\n $s signatures in $name";
