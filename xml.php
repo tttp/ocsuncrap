@@ -12,11 +12,12 @@ if (!$file) {
 
 if (is_dir($file)) {
   $total = 0;
-  $csv= $argv[1]."csv";
+  $csv= $argv[1].".csv";
   $fp = fopen($csv, 'w');
   $objects = new RecursiveIteratorIterator(new RecursiveDirectoryIterator($file));
   foreach($objects as $name => $object){
-    if ("_dec.xml" == substr ($name,-8)) {
+    if (".xml" == substr ($name,-4)) {
+//    if ("_dec.xml" == substr ($name,-8)) {
       $s = xml2csv($fp,$name);
       $total +=$s;
       echo "\n $s signatures in $name";
